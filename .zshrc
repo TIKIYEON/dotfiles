@@ -89,4 +89,11 @@ eval "$(zoxide init --cmd cd zsh)"
 # Paths
 export PATH="$PATH:/usr/local/share/dotnet"
 export PATH="$PATH:/home/tikki/.dotnet/tools"
+export PATH=/usr/bin:$PATH
+export TEXINPUTS=/home/tikki/Documents/School/su/assignments/common//:
+export PATH="$PATH:/home/tikki/.cargo/bin"
 
+# Exports
+export PATH=$HOME/.scripts:$PATH
+export EDITOR=nvim
+export VISUAL=nvim
