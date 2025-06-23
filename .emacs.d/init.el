@@ -17,6 +17,21 @@
   (setq use-package-always-ensure t
         use-package-expand-minimally t))
 
+(defvar bootstrap-version)
+(let ((bootstrap-file
+       (expand-file-name
+        "straight/repos/straight.el/bootstrap.el"
+        (or (bound-and-true-p straight-base-dir)
+            user-emacs-directory)))
+      (bootstrap-version 7))
+  (unless (file-exists-p bootstrap-file)
+    (with-current-buffer
+        (url-retrieve-synchronously
+         "https://raw.githubusercontent.com/radian-software/straight.el/develop/install.el"
+         'silent 'inhibit-cookies)
+      (goto-char (point-max))
+      (eval-print-last-sexp)))
+  (load bootstrap-file nil 'nomessage))
 ;; Dotnet paths and stuff
 (setenv "PATH" (concat (getenv "PATH") ":" (expand-file-name "~/.dotnet/tools")))
 (add-to-list 'exec-path (expand-file-name "~/.dotnet/tools"))
@@ -32,7 +47,11 @@
 (menu-bar-mode -1)      ; Disable menu bar
 
 ;; Set font
-(set-face-attribute 'default nil :family "SF Mono" :height 110)
+(set-face-attribute 'default nil :family "SF Mono" :height 110 :weight 'semi-bold)
+(custom-set-faces
+ '(variable-pitch ((t (:family "SF Pro" :height 125))))
+ '(fixed-pitch ((t (:family "SF Mono" :height 110)))))
+(add-hook 'org-mode-hook 'variable-pitch-mode)
 
 ;;; Keybindings
 ;; Make ESC quit prompts
@@ -40,6 +59,12 @@
 
 ;; Switch buffer
 (global-set-key (kbd "C-M-j") 'counsel-switch-buffer)
+
+;; Eglot things
+(global-set-key (kbd "C-c a") 'eglot-code-actions)
+
+;; Enable which-key
+(which-key-mode 1)
 
 ;; Relative line numbers
 (column-number-mode)
@@ -60,7 +85,7 @@
 (setq-default tab-width 4)
 
 ;; Set Theme
-(load-theme 'modus-operandi t)
+(load-theme 'modus-vivendi t)
 
 ; Package
 ;; Enable vertico
@@ -357,16 +382,56 @@
   (indent-bars-color '("#C8E6C9" :blend 0.3))
   :hook ((python-mode yaml-mode fsharp-mode lisp-mode common.lisp-mode) . indent-bars-mode))
 
+(use-package org-roam
+  :ensure t
+  :straight t
+  :custom
+  (org-roam-directory (file-truename "/home/tikki/Documents/CSnotes/roam"))
+  :bind (("C-c n l" . org-roam-buffer-toggle)
+         ("C-c n f" . org-roam-node-find)
+         ("C-c n g" . org-roam-graph)
+         ("C-c n i" . org-roam-node-insert)
+         ("C-c n c" . org-roam-capture)
+         ;; Dailies
+         ("C-c n j" . org-roam-dailies-capture-today))
+  :config
+  ;; If you're using a vertical completion framework, you might want a more informative completion interface
+  (setq org-roam-node-display-template (concat "${title:*} " (propertize "${tags:10}" 'face 'org-tag)))
+  (org-roam-db-autosync-mode)
+  ;; If using org-roam-protocol
+  (require 'org-roam-protocol))
+
+(use-package org-roam-ui
+  :straight
+    (:host github :repo "org-roam/org-roam-ui" :branch "main" :files ("*.el" "out"))
+    :after org-roam
+;;         normally we'd recommend hooking orui after org-roam, but since org-roam does not have
+;;         a hookable mode anymore, you're advised to pick something yourself
+;;         if you don't care about startup time, use
+;;  :hook (after-init . org-roam-ui-mode)
+    :config
+    (setq org-roam-ui-sync-theme t
+          org-roam-ui-follow t
+          org-roam-ui-update-on-save t
+          org-roam-ui-open-on-start t))
+
+
+(with-eval-after-load 'org
+  (setq org-startup-indented t)
+  (add-hook 'org-mode-hook #'visual-line-mode))
+
+;; org superstar
+ (use-package org-superstar
+    :config
+    (add-hook 'org-mode-hook (lambda () (org-superstar-mode 1))))
+
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(corfu eglot-fsharp embark-consult fsharp-mode haskell-mode
-           indent-bars kind-icon marginalia nerd-icons-completion
-           orderless rainbow-delimiters vertico)))
+ '(package-selected-packages nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
