@@ -1,0 +1,14 @@
+# Ignore Emacs cache and configuration files
+.emacs.d/.cache/
+.emacs.d/.org-id-locations
+.emacs.d/FsAutoComplete/
+.emacs.d/bookmarks
+.emacs.d/bookmarks~
+.emacs.d/eln-cache/
+.emacs.d/elpa/
+.emacs.d/history
+.emacs.d/init.el~
+.emacs.d/org-roam.db
+.emacs.d/straight/
+.emacs.d/tree-sitter/
+
