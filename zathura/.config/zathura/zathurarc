@@ -1,42 +1,17 @@
 set recolor true
 
-# Kanagawa Colors for Zathura
-
-set notification-error-bg       "#e82424" # bright red
-set notification-error-fg       "#1f1f28" # background
-set notification-warning-bg     "#c0a36e" # yellow
-set notification-warning-fg     "#1f1f28" # background
-set notification-bg             "#957fb8" # magenta
-set notification-fg             "#1f1f28" # background
-
-set completion-bg               "#1f1f28" # background
-set completion-fg               "#76946a" # green
-set completion-group-bg         "#1f1f28" # background
-set completion-group-fg         "#7e9cd8" # blue
-set completion-highlight-bg     "#2d4f67" # selection background
-set completion-highlight-fg     "#c8c093" # selection foreground
-
-set index-bg                    "#1f1f28" # background
-set index-fg                    "#76946a" # green
-set index-active-bg             "#2d4f67" # selection background
-set index-active-fg             "#c8c093" # selection foreground
-
-set inputbar-bg                 "#1f1f28" # background
-set inputbar-fg                 "#dcd7ba" # foreground
-set statusbar-bg                "#1f1f28" # background
-set statusbar-fg                "#957fb8" # magenta
-
-set highlight-color             "#957fb8" # magenta
-set highlight-active-color      "#7e9cd8" # blue
-
-set default-bg                  "#1f1f28" # background
-set default-fg                  "#dcd7ba" # foreground
-
+# Carbon Fox Colors for Zathura
+# Default colors
+set default-bg                  "#161616" # background
+set default-fg                  "#f2f4f8" # foreground
+# Render loading colors
 set render-loading              true
-set render-loading-fg           "#dcd7ba" # foreground
-set render-loading-bg           "#1f1f28" # background
-
-# Recolor mode settings
-set recolor-lightcolor          "#1f1f28" # background
-set recolor-darkcolor           "#dcd7ba" # foreground
-
+set render-loading-fg           "#f2f4f8" # foreground
+set render-loading-bg           "#161616" # background
+# Completion colors
+set completion-bg               "#161616" # background
+set completion-fg               "#f2f4f8" # foreground
+set completion-group-bg         "#161616" # background
+set completion-group-fg         "#78A9FF" # blue
+set completion-highlight-bg     "#2a2a2a" # selection background
+set completion-highlight-fg     "#f2f4f8" # foreground
