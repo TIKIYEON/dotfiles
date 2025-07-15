@@ -47,7 +47,7 @@
 (menu-bar-mode -1)      ; Disable menu bar
 
 ;; Set font
-(set-face-attribute 'default nil :family "SF Mono" :height 110 :weight 'semi-bold)
+(set-face-attribute 'default nil :family "SF Mono" :height 125 :weight 'semi-bold)
 (custom-set-faces
  '(variable-pitch ((t (:family "SF Pro" :height 125))))
  '(fixed-pitch ((t (:family "SF Mono" :height 110)))))

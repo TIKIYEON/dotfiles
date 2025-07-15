@@ -1,13 +1,15 @@
 * {
-    border-radius: 0;
+    /* border-radius: 0; */
     font-family: SF-Mono;
-    font-size: 11pt;
+    font-size: 12pt;
     min-height: 0;
 }
 
+
 window#waybar {
-    background: #161616;
-    color: #f2f4f8;
+    background-color: #282828;
+    border: solid 0px;
+    color: #ffffff;
 }
 
 tooltip {
