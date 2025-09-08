@@ -1,3 +1,4 @@
+uwufetch
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -97,3 +98,5 @@ export PATH="$PATH:/home/tikki/.cargo/bin"
 export PATH=$HOME/.scripts:$PATH
 export EDITOR=nvim
 export VISUAL=nvim
+
+[ -f "/home/tikki/.ghcup/env" ] && . "/home/tikki/.ghcup/env" # ghcup-env

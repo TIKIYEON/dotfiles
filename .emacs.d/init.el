@@ -47,10 +47,10 @@
 (menu-bar-mode -1)      ; Disable menu bar
 
 ;; Set font
-(set-face-attribute 'default nil :family "SF Mono" :height 125 :weight 'semi-bold)
+(set-face-attribute 'default nil :family "Adwaita Mono" :height 125 :weight 'semi-bold)
 (custom-set-faces
- '(variable-pitch ((t (:family "SF Pro" :height 125))))
- '(fixed-pitch ((t (:family "SF Mono" :height 110)))))
+ '(variable-pitch ((t (:family "Adwaita Sans" :height 125))))
+ '(fixed-pitch ((t (:family "Adwaita Mono" :height 110)))))
 (add-hook 'org-mode-hook 'variable-pitch-mode)
 
 ;;; Keybindings
@@ -415,6 +415,11 @@
           org-roam-ui-update-on-save t
           org-roam-ui-open-on-start t))
 
+;; Org agenda things
+(setq org-log-done t)
+(setq org-agenda-files '("~/Documents/School/tasks.org"
+                         "~/Documents/School/TA-s-corner/tasks.org"))
+(global-set-key (kbd "C-c a") 'org-agenda)
 
 (with-eval-after-load 'org
   (setq org-startup-indented t)
@@ -424,6 +429,9 @@
  (use-package org-superstar
     :config
     (add-hook 'org-mode-hook (lambda () (org-superstar-mode 1))))
+
+;; Futhark
+(use-package futhark-mode)
 
 
 (custom-set-variables

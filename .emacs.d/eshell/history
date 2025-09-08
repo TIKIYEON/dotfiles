@@ -1,0 +1,86 @@
+ls
+ghci 
+pwd 
+cabal Eval_Tests.hs 
+cabal test
+cd ..
+ls
+cd ..
+ls
+cabal test
+futhark --version
+ls
+cd ..
+ls
+cd lssp/ 
+ls
+futhark bench lssp-same.fut
+futhark bench lssp-zeros.fut 
+futhark bench lssp-sorted.fut 
+futhark bench lssp-same.fut
+futhark bench lssp-zeros.fut 
+futhark bench lssp-sorted.fut 
+futhark bench lssp-same.fut
+futhark bench lssp-same.fut
+cat lssp-same.fut 
+futhark bench lssp-same.fut
+futhark bench lssp-same.fut
+futhark bench lssp-same.fut
+futhark bench lssp-same.fut
+futhark bench lssp-same.fut
+futhark bench lssp-same.fut
+futhark bench lssp-same.fut
+futhark bench lssp-same.fut
+futhark bench lssp-same.fut
+futhark bench lssp-sorted.fut 
+futhark bench lssp-same.fut
+futhark bench lssp-same.fut
+futhark bench lssp-same.fut
+futhark bench lssp-zeros 
+futhark bench lssp-zeros.fut 
+futhark bench lssp-zeros.fut 
+futhark bench lssp-same.fut 
+futhark bench lssp-zeros.fut 
+futhark bench lssp-same.fut 
+futhark bench lssp-same.fut 
+futhark bench lssp-zeros.fut 
+futhark bench lssp-zeros.fut 
+futhark bench lssp-zeros.fut 
+futhark bench lssp-zeros.fut 
+futhark bench lssp-zeros.fut 
+futhark test --backend=cuda lssp-sorted.fut 
+futhark test --backend=cuda lssp-sorted.fut 
+futhark test --backend=cuda lssp-sorted.fut 
+futhark bench lssp-same.fut 
+futhark bench lssp-zeros.fut 
+dotnet fsi
+futhark bench lssp-zeros.fut 
+futhark bench lssp-same.fut 
+futhark bench lssp-same.fut 
+futhark bench lssp-sorted.fut 
+futhark bench lssp-zeros.fut 
+futhark bench lssp-zeros.fut 
+futhark bench lssp-sorted.fut 
+futhark bench lssp-same.fut 
+futhark bench lssp-zeros.fut 
+futhark bench lssp-zeros.fut 
+futhark bench lssp-zeros.fut 
+futhark bench lssp-seq.fut 
+futhark bench lssp-same.fut 
+futhark bench lssp-same.fut 
+futhark bench lssp-same.fut 
+futhark bench lssp-same.fut 
+futhark bench lssp-same.fut 
+futhark bench lssp-same.fut 
+futhark bench lssp-sorted.fut 
+futhark bench lssp-sorted.fut 
+futhark bench lssp-sorted.fut 
+futhark bench lssp-sorted.fut 
+futhark bench lssp-sorted.fut 
+ls
+cd ..
+ls
+cd ..
+ls
+cabal test 
+ghcup
