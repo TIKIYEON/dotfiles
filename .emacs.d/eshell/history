@@ -84,3 +84,12 @@ cd ..
 ls
 cabal test 
 ghcup
+ls
+cabal repl
+cabal repl APL.Eval
+ls
+cd ..
+ls
+cd ..
+ls
+cabal repl APL.Eval
