@@ -93,3 +93,14 @@ ls
 cd ..
 ls
 cabal repl APL.Eval
+dotnet fsi
+ls
+dotnet fsi thur.fsx 
+dotnet fsi thur.fsx 
+dotnet fsi thur.fsx 
+dotnet fsi thur.fsx 
+dotnet fsi thur.fsx 
+dotnet fsi thur.fsx 
+dotnet fsi thur.fsx 
+dotnet fsi thur.fsx 
+git stash 

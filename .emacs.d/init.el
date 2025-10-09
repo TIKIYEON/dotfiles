@@ -433,6 +433,16 @@
 ;; Futhark
 (use-package futhark-mode)
 
+;; Eldoc-box
+;;(require 'eldoc-box)
+;(add-hook 'eglot-managed-mode-hook #'eldoc-box-hover-mode t)
+(use-package eldoc-box
+  :after eglot                      ;; ensure eglot is loaded first
+                                        ;:hook (eglot-managed-mode . eldoc-box-hover-mode)   ;; enable hover mode in eglot buffer
+  :bind (:map eglot-mode-map
+              ("C-c C-e" . eldoc-box-help-at-point))) ;; bind in eglot buffers
+(add-hook 'eldoc-box-buffer-setup-hook #'eldoc-box-prettify-ts-errors 0 t)
+
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
