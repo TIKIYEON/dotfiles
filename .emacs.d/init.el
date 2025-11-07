@@ -49,8 +49,12 @@
 ;; Set font
 (set-face-attribute 'default nil :family "Adwaita Mono" :height 125 :weight 'semi-bold)
 (custom-set-faces
- '(variable-pitch ((t (:family "Adwaita Sans" :height 125))))
- '(fixed-pitch ((t (:family "Adwaita Mono" :height 110)))))
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(fixed-pitch ((t (:family "Adwaita Mono" :height 110))))
+ '(variable-pitch ((t (:family "Adwaita Sans" :height 125)))))
 (add-hook 'org-mode-hook 'variable-pitch-mode)
 
 ;;; Keybindings
@@ -433,6 +437,20 @@
 ;; Futhark
 (use-package futhark-mode)
 
+;; OCaml
+(add-to-list 'load-path "/home/tikki/.opam/default/share/emacs/site-lisp")
+(require 'ocp-indent)
+(use-package neocaml
+  :vc (:url "https://github.com/bbatsov/neocaml" :rev :newest)
+  ;; teach Eglot about neocaml
+  (add-to-list 'eglot-server-programs '((neocaml-mode :language-id "ocaml") . ("ocamllsp")))
+  (add-hook 'neocaml-mode-hook #'neocaml-repl-minor-mode)
+)
+;; this font-lock everything neocaml supports
+(setq neocaml-use-prettify-symbols t)
+;; this font-lock everything neocaml supports
+(setq treesit-font-lock-level 4)
+
 ;; Eldoc-box
 ;;(require 'eldoc-box)
 ;(add-hook 'eglot-managed-mode-hook #'eldoc-box-hover-mode t)
@@ -449,10 +467,5 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages nil))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+ '(package-vc-selected-packages '((neocaml :url "https://github.com/bbatsov/neocaml"))))
+

@@ -1,0 +1,50 @@
+{
+    "appearance": {
+        "wallcolors": {
+            "wallpaper_path": "/home/tikki/Pictures/Wall/bg-cool.png",
+            "color_scheme": "fidelity",
+            "quickselect_path": "/home/tikki/Pictures/Wall",
+            "dark_mode": false,
+            "auto_dark": {}
+        }
+    },
+    "interface": {
+        "modules": {
+            "location": {
+                "tasks": 0,
+                "launcher": 2
+            },
+            "visibility": {
+                "launcher": true,
+                "tasks": true
+            },
+            "bar_id": {
+                "launcher": 1,
+                "tasks": 1
+            },
+            "options": {
+                "military_time": true
+            }
+        },
+        "bar": {
+            "side": "top",
+            "density": 1,
+            "floating": false,
+            "vertical": false
+        },
+        "bar2": {
+            "side": "right",
+            "vertical": true,
+            "density": 1,
+            "enabled": true,
+            "floating": false
+        },
+        "notifications": {},
+        "launcher": {},
+        "misc": {}
+    },
+    "services": {
+        "recorder": {},
+        "osd": {}
+    }
+}
