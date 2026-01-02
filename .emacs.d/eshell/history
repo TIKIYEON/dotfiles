@@ -104,3 +104,20 @@ dotnet fsi thur.fsx
 dotnet fsi thur.fsx 
 dotnet fsi thur.fsx 
 git stash 
+ls
+dotnet fsi classes.fsx 
+dotnet fsi classes.fsx 
+dotnet fsi classes.fsx 
+dotnet fsi accessors.fsx 
+dotnet fsi accessors.fsx 
+dotnet fsi accessors.fsx 
+dotnet fsi accessors.fsx 
+dotnet fsi accessors.fsx 
+dotnet fsi accessors.fsx 
+dotnet fsi accessors.fsx 
+dotnet fsi accessors.fsx 
+dotnet fsi accessors.fsx 
+dotnet fsi accessors.fsx 
+dotnet fsi static.fsx 
+dotnet fsi static.fsx 
+dotnet fsi inherit.fsx 

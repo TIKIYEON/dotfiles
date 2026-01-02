@@ -28,7 +28,7 @@
         },
         "bar": {
             "side": "top",
-            "density": 1,
+            "density": 2,
             "floating": false,
             "vertical": false
         },
