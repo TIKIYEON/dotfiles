@@ -1,0 +1,78 @@
+* {
+    /* border-radius: 0; */
+    font-family: Adwaita-Mono;
+    font-size: 12pt;
+    min-height: 0;
+}
+
+
+window#waybar {
+    background-color: #282828;
+    border: solid 0px;
+    color: #ffffff;
+}
+
+tooltip {
+	background: #161616;
+	border-radius: 10px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #8cb6ff;
+	}
+
+#workspaces {
+    background: #282828;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+
+#workspaces button {
+    padding-left: 5px;
+    padding-right: 10px;
+    min-width: 0;
+    color: #f2f4f8;
+}
+
+#workspaces button.active {
+    color: #ff7eb6;
+}
+
+#workspaces button.urgent {
+    color: #be95ff;
+}
+
+#workspaces button:hover {
+    background: #282828;
+    border-color: #282828;
+    color: #f16da6;
+}
+
+#bluetooth, #backlight, #clock, #battery, #pulseaudio, #workspaces, #tray, #custom-power, #cpu, #memory, #idle_inhibitor, #power-profiles-daemon {
+    padding: 0px 10px;
+    background: #282828;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+#tray {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+#custom-power {
+    color: #ff7eb6;
+    padding-right: 13px;
+    padding-left: 15px;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+#power-profiles-daemon {
+    padding-right: 15px;
+    padding-left: 8px;
+    margin-left: 5px;
+    margin-right: 5px;
+} 

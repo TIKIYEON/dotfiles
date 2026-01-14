@@ -89,7 +89,7 @@
 (setq-default tab-width 4)
 
 ;; Set Theme
-(load-theme 'modus-operandi t)
+(load-theme 'modus-operandi-tinted t)
 
 ; Package
 ;; Enable vertico
