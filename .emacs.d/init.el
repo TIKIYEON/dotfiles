@@ -47,7 +47,7 @@
 (menu-bar-mode -1)      ; Disable menu bar
 
 ;; Set font
-(set-face-attribute 'default nil :family "Adwaita Mono" :height 125 :weight 'semi-bold)
+(set-face-attribute 'default nil :family "Adwaita Mono" :height 120 :weight 'semi-bold)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -89,7 +89,7 @@
 (setq-default tab-width 4)
 
 ;; Set Theme
-(load-theme 'modus-operandi-tinted t)
+(load-theme 'modus-vivendi-tinted t)
 
 ; Package
 ;; Enable vertico
