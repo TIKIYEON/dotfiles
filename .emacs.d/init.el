@@ -89,7 +89,7 @@
 (setq-default tab-width 4)
 
 ;; Set Theme
-(load-theme 'modus-vivendi-tinted t)
+(load-theme 'modus-vivendi t)
 
 ; Package
 ;; Enable vertico
@@ -370,7 +370,9 @@
   :ensure nil
   :bind (:map global-map
               ("M-n" . #'flymake-goto-next-error)
-              ("M-p" . #'flymake-goto-prev-error)))
+              ("M-p" . #'flymake-goto-prev-error))
+  :custom
+  (flymake-show-diagnostics-at-end-of-line 'fancy))
 
 ;; Indent bars (with tree sitter)
 (use-package indent-bars
