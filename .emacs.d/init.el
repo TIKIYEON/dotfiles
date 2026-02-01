@@ -436,6 +436,16 @@
     :config
     (add-hook 'org-mode-hook (lambda () (org-superstar-mode 1))))
 
+;; More Org
+(setq org-attach-directory "/home/tikki/Documents/CSnotes/media")
+(setq org-attach-use-inheritance t)
+(setq org-startup-with-inline-images t)
+
+;; Org Download
+(require 'org-download)
+(add-hook 'dired-mode-hook 'org-download-enable)
+(setq-default org-download-image-dir "/home/tikki/Documents/CSnotes/media")
+
 ;; Futhark
 (use-package futhark-mode)
 
