@@ -47,7 +47,7 @@
 (menu-bar-mode -1)      ; Disable menu bar
 
 ;; Set font
-(set-face-attribute 'default nil :family "Adwaita Mono" :height 120 :weight 'semi-bold)
+(set-face-attribute 'default nil :family "Adwaita Mono" :height 105 :weight 'semi-bold)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -358,8 +358,28 @@
     (add-to-list 'eglot-server-programs
                  '(fhsarp-mode . ("fsautocomplete" "--background-services-enabled")))))
 
+;; Haskell
 (use-package haskell-mode
   :ensure t)
+
+;; Rust
+(use-package rust-mode
+  :ensure t
+  :init
+  (setq rust-mode-treesitter-derive t)
+  :config
+  (setq rust-format-on-save t)
+  (add-hook 'rust-mode-hook
+            (lambda ()
+              (setq indent-tabs-mode nil)
+              (prettify-symbols-mode)))
+  (add-hook 'rust-mode-hook 'eglot-ensure))
+
+;; Python
+(use-package pyvenv
+  :ensure t
+  :config
+  (pyvenv-mode t))
 
 (use-package eglot
   :ensure t
@@ -471,6 +491,9 @@
                                         ;:hook (eglot-managed-mode . eldoc-box-hover-mode)   ;; enable hover mode in eglot buffer
   :bind (:map eglot-mode-map
               ("C-c C-e" . eldoc-box-help-at-point))) ;; bind in eglot buffers
+
+
+
 (add-hook 'eldoc-box-buffer-setup-hook #'eldoc-box-prettify-ts-errors 0 t)
 
 
@@ -479,5 +502,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-vc-selected-packages '((neocaml :url "https://github.com/bbatsov/neocaml"))))
+ '(package-vc-selected-packages '((neocaml :url "https://github.com/bbatsov/neocaml")))
+ '(safe-local-variable-directories '("/home/tikki/Documents/School/web-rs/WRS-2026/")))
 
