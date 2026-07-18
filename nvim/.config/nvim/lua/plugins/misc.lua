@@ -15,24 +15,14 @@ return {
 	},
 	-- Colorscheme
 	-- Using lazy.nvim
-	-- {
-	--     "metalelf0/black-metal-theme-neovim",
-	--     lazy = false,
-	--     priority = 1000,
-	--     config = function()
-	--         require("black-metal").setup({
-	--             -- optional configuration here
-	--             theme = "taake",
-	--             variant = "dark",
-	--             alt_bg = false,
-	--             colored_docstring = true,
-	--             cursorline_gutter = true,
-	--             dark_gutter = false,
-	--             favor_treesitter_hl = true,
-	--         })
-	--         require("black-metal").load()
-	--     end,
-	-- },
+	{
+		"webhooked/kanso.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			vim.cmd("colorscheme kanso-pearl")
+		end,
+	},
 	-- {
 	--     "EdenEast/nightfox.nvim",
 	--     config = function()
@@ -50,13 +40,13 @@ return {
 	--     -- 		vim.cmd("colorscheme carbonfox")
 	--     -- 	end,
 	-- },
-	{
-		"rebelot/kanagawa.nvim",
-		priority = 1000,
-		config = function()
-			vim.cmd([[colorscheme kanagawa-dragon]])
-		end,
-	},
+	-- {
+	-- 	"rebelot/kanagawa.nvim",
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		vim.cmd([[colorscheme kanagawa-dragon]])
+	-- 	end,
+	-- },
 	-- {
 	-- 	"miikanissi/modus-themes.nvim",
 	-- 	priority = 1000,

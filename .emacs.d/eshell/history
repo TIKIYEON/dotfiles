@@ -1,8 +1,3 @@
-ls
-ghci 
-pwd 
-cabal Eval_Tests.hs 
-cabal test
 cd ..
 ls
 cd ..
@@ -121,3 +116,13 @@ dotnet fsi accessors.fsx
 dotnet fsi static.fsx 
 dotnet fsi static.fsx 
 dotnet fsi inherit.fsx 
+ls
+pip --list
+pip list
+source ../webrs-env/bin/activate 
+source ../webrs-env/bin/activate 
+ls
+source ../webrs-env/bin/activate 
+ls
+python ucb.py 
+ls

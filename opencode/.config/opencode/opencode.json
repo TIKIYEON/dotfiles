@@ -1,0 +1,13 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "permission": {
+    "skill": {
+      "*": "allow",
+      "grill-me": "ask",
+      "handoff": "ask",
+      "implement": "ask",
+      "teach": "ask",
+      "wayfinder": "ask"
+    }
+  }
+}

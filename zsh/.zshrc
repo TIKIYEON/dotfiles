@@ -94,6 +94,8 @@ export PATH=/usr/bin:$PATH
 export TEXINPUTS=/home/tikki/Documents/School/su/assignments/common//:
 export PATH="$PATH:/home/tikki/.cargo/bin"
 export PATH="/home/tikki/.local/bin:$PATH"
+export PATH="/usr/bin/bun:$PATH"
+export PATH="/home/tikki/.bun/bin:$PATH"
 
 
 # Exports
@@ -114,3 +116,6 @@ export PATH=$JAVA_HOME/bin:$PATH
 # This section can be safely removed at any time if needed.
 [[ ! -r '/home/tikki/.opam/opam-init/init.zsh' ]] || source '/home/tikki/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
 # END opam configuration
+
+# bun completions
+[ -s "/home/tikki/.bun/_bun" ] && source "/home/tikki/.bun/_bun"
